@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMZ Map Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column; /* Stack title and gallery */
+      align-items: center; /* Center horizontally */
+      height: 100vh;
+      overflow: hidden; /* Prevent scrolling on body */
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin: 20px 0; /* Space around header */
+    }
+
+    .header img {
+      max-width: 100px; /* Logo size */
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: auto; /* Enable vertical scrolling */
+      width: 80vw; /* Width of the gallery container */
+      height: 80vh; /* Height of the gallery container */
+      border: 2px solid #ddd; /* Border around gallery */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+      background-color: white; /* Background for gallery */
+      position: relative; /* Position for modal */
+    }
+
+    .gallery-item {
+      width: calc(50% - 10px); /* Two large images side by side */
+      margin: 5px; /* Margin between images */
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      cursor: pointer; /* Pointer on hover */
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+      opacity: 0;
+      transition: opacity 0.5s ease; /* Fade in/out effect */
+    }
+
+    .modal-content {
+      display: flex;
+      flex-direction: column; /* Stack title and image */
+      justify-content: center;
+      align-items: center;
+      margin: 5% auto;
+      max-width: 90vw; /* Width less than full screen */
+      max-height: 90vh; /* Height less than full screen */
+      transform: scale(0.5); /* Start small */
+      transition: transform 0.5s ease; /* Zoom effect */
+    }
+
+    .modal-title {
+      color: white; /* White color for title */
+      font-weight: bold; /* Bold title */
+      margin-bottom: 20px; /* Space below title */
+      text-align: center; /* Center title */
+	  font-size: 28px; /* Increase font size */
+    }
+
+    .modal-content img {
+      width: 200%;
+      height: auto;
+      max-width: 150%; 
+      max-height: 200vh; /* Limit height */
+      box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5); /* 3D Shadow effect */
+      border-radius: 20px; /* Rounded corners */
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .gallery-item {
+        width: calc(100% - 10px); /* Single column on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <img src="amz.png" alt="Logo"> <!-- Replace with your logo -->
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="maps/Layout.jpg" alt="Image 1" onclick="openModal(this.src, 'Analysis of religious uses based on the number of overlapping standard access radii')">
+    </div>
+    <div class="gallery-item">
+      <img src="maps/abha solar radiation2.jpg" alt="Image 2" onclick="openModal(this.src, 'Analysis of the amounts of radiation falling on the city of Abha, Saudi Arabia')">
+    </div>
+    <div class="gallery-item">
+      <img src="maps/TWI.jpg" alt="Image 3" onclick="openModal(this.src, 'Topographic Wetness Index (TWI)on the city of Abha, Saudi Arabia ')">
+    </div>
+    <div class="gallery-item">
+      <img src="maps/Ticks.2.jpg" alt="Image 4" onclick="openModal(this.src, 'Analysis of Ohio tick insect concentration locations')">
+    </div>
+    <div class="gallery-item">
+      <img src="maps/NDBI.png" alt="Image 5" onclick="openModal(this.src, 'NDVI')">
+    </div>
+    <div class="gallery-item">
+      <img src="maps/NDVI.png" alt="Image 6" onclick="openModal(this.src, 'NDVI')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/maher1.jpg" alt="Image 6" onclick="openModal(this.src, 'Commercial activities and crafts on Ahmed Maher Street')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/maher2.jpg" alt="Image 6" onclick="openModal(this.src, 'Social activities and services on Ahmed Maher Street')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/Hospitals in Ohio.jpg" alt="Image 6" onclick="openModal(this.src, 'How close hospitals are to solid waste dumping sites')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/shoreline2.jpg" alt="Image 6" onclick="openModal(this.src, 'Erosion of the shoreline in Lake Manzala')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/NO2.jpg" alt="Image 6" onclick="openModal(this.src, 'NO2 gas concentration rates in Beni Suef Governorate')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/so2.jpg" alt="Image 6" onclick="openModal(this.src, 'SO2 gas concentration rates in Beni Suef Governorate')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/HCHO.jpg" alt="Image 6" onclick="openModal(this.src, 'Hcho gas concentration rates in Beni Suef Governorate')">
+    </div>
+	<div class="gallery-item">
+      <img src="maps/o3.jpg" alt="Image 6" onclick="openModal(this.src, 'O3 gas concentration rates in Beni Suef Governorate')">
+    </div>
+    <!-- Add more images as needed -->
+  </div>
+
+  <!-- Modal Section -->
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div id="modalTitle" class="modal-title"></div> <!-- Title for modal -->
+      <img id="modalImage" alt="Enlarged Image">
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    // Function to open modal
+    function openModal(src, title) {
+      var modal = document.getElementById("myModal");
+      var modalImage = document.getElementById("modalImage");
+      var modalTitle = document.getElementById("modalTitle");
+      modal.style.display = "block";
+      modalImage.src = src;
+      modalTitle.innerText = title; // Set the title for the modal
+      setTimeout(function() {
+        modal.style.opacity = 1; // Fade in effect
+      }, 10);
+    }
+
+    // Function to close modal
+    function closeModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.opacity = 0; // Fade out effect
+      setTimeout(function() {
+        modal.style.display = "none";
+      }, 500); // Wait for the fade out effect
+    }
+
+    // Close modal when clicking outside of the modal content
+    window.onclick = function(event) {
+      var modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>

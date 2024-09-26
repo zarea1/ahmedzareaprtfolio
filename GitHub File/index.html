@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Zarea - CV</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #2c3e50;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #555;
+            flex-direction: row; /* جعل العناصر مرتبة أفقياً */
+        }
+
+        .contact-info i {
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .section h2::before {
+            content: "";
+            width: 6px;
+            height: 100%;
+            margin-right: 10px;
+            background-color: #2c3e50;
+            border-radius: 3px;
+        }
+
+        .skills, .work-history, .accomplishments, .certifications, .education {
+            background-color: #f2f4f8;
+        }
+
+        .skills h2::before {
+            background-color: #3498db;
+        }
+
+        .work-history h2::before {
+            background-color: #1abc9c;
+        }
+
+        .accomplishments h2::before {
+            background-color: #9b59b6;
+        }
+
+        .certifications h2::before {
+            background-color: #f39c12;
+        }
+
+        .education h2::before {
+            background-color: #e74c3c;
+        }
+
+        .section p, .section ul {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .skills ul, .certifications ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills li, .certifications li {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            flex: 1 1 calc(33% - 20px); /* Adjust this based on how many items per row you want */
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills li:hover, .certifications li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .work-history ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .work-history li, .accomplishments li, .professional-summary, .education li {
+            background: #fff;
+            border-radius: 13px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-history li:hover, .accomplishments li:hover, .professional-summary:hover, .education li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .skills li, .certifications li {
+                flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+            }
+
+            .work-history li, .accomplishments li, .professional-summary, .education li {
+                flex: 1 1 100%; /* Full width on smaller screens */
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .job-title {
+                font-size: 1em;
+            }
+
+            .contact-info {
+                font-size: 0.8em;
+                flex-direction: row; /* لا تزال مرتبة أفقياً */
+            }
+
+            .contact-info i {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            .job-title {
+                font-size: 0.9em;
+            }
+
+            .contact-info {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ahmed Mohamed Zarea</h1>
+            <div class="job-title">GIS Specialist</div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> <a href="mailto:zareaahmed23@gmail.com">zareaahmed23@gmail.com</a>
+                <i class="fas fa-phone-alt"></i> +20 1066324053
+                <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
+                <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ahmed-zarea" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary Section -->
+        <section class="section professional-summary">
+            <h2>Professional Summary</h2>
+            <p>Successful GIS Specialist accomplished in handling large volumes of complex GIS data for industry or government use. Talents include spatial analysis and preparing graphic representations. Reliable in completing accurate work according to specifications.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Esri Products</li>
+                <li>AutoCAD</li>
+                <li>Civil3D</li>
+                <li>Google Earth Engine</li>
+                <li>Python</li>
+                <li>QGIS Scripting</li>
+            </ul>
+        </section>
+
+        <!-- Work History Section -->
+        <section class="section work-history">
+            <h2>Work History</h2>
+            <ul>
+                <li>
+                    <div class="date">Jan 2023 - Current</div>
+                    <strong>GIS Specialist</strong> - UpWork, Remote
+                    <ul>
+                        <li>Design and produce high-quality maps and visualizations.</li>
+                        <li>Integrate GIS with other technologies and data sources (CAD).</li>
+                        <li>Conducted spatial analysis with ArcGIS to determine optimal locations for electric vehicle charging stations.</li>
+                        <li>Created a database for the Harem Hawara region and conducted analyses on vegetation cover, land use, precipitation, and temperature.</li>
+                        <li>Executed a project analyzing the amount of solar radiation for the city of Abha, Saudi Arabia for the year 2023.</li>
+						<li>Create a 3D model of Mount Kilimanjaro using Python.</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="date">Aug 2023 - Jul 2024</div>
+                    <strong>Technical Office & GIS Engineer</strong> - GIS Office, Bani Suwayf,EG
+                    <ul>
+                        <li>Assisted in the development of GIS applications and services.</li>
+                        <li>Performed quality control and assurance of GIS data.</li>
+						<li>Preparing, drawing, and designing maps.</li>
+						<li>Verifying the accuracy and validity of the surveying data collected on-site.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Accomplishments Section -->
+        <section class="section accomplishments">
+            <h2>Accomplishments</h2>
+            <ul>
+                <li>Implementation of graduation project titled "Using Geomatics Techniques to Study Air Quality in Beni Suef Governorate", Beni sueif University, A+, 2024.</li>
+            </ul>
+        </section>
+
+          <!-- Education Section -->
+        <section class="section education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Beni Suef University</strong> - Bachelor of Arts in Geomatics (2024)
+                    <p>Grade: Very Good</p>
+                </li>
+            </ul>
+        </section>
+		
+		
+        <!-- Certifications Section -->
+       <section class="section certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>
+            <a href="crti/python_intermidiate.pdf" target="_blank" >Certified Python, Microsoft - 2023</a>
+        </li>
+        <li>
+            <a href="crti/python - iti.jpg" target="_blank">Certified Python, (ITI) - 2024</a>
+        </li>
+        <li>
+            <a href="crti/ArcGIS Online Basics.pdf" target="_blank">ArcGIS Online Basics, ESRI - 2024</a>
+        </li>
+		<li>
+            <a href="crti/ArcGIS Pro Basics.pdf" target="_blank">ArcGIS Pro Basics, ESRI - 2024</a>
+        </li>
+		<li>
+            <a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank">Putting Your GIS Skills to Work, ESRI - 2024</a>
+        </li>
+		<li>
+            <a href="crti/Using GIS to Solve Problems.pdf" target="_blank">Using GIS to Solve Problems, ESRI - 2024</a>
+        </li>
+		<li>
+            <a href="crti/شهاده Arcgis Pro.pdf" target="_blank">Learn Arcgis Pro, Geosteps - 2024</a>
+        </li>
+    </ul>
+</section>
+    </div>
+
+</body>
+</html>

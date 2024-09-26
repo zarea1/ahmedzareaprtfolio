@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mohamed Zarea | Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* جعل الجسم كامل الارتفاع */
+            background: url('icon/surface.jpg') no-repeat center center fixed; /* ضع هنا رابط صورة الخلفية */
+            background-size: cover; /* تغطية كاملة للخلفية */
+            filter: brightness(0.97); /* سطوع الخلفية */
+        }
+
+        .content {
+			position: relative;
+			z-index: 1; /* لجعل المحتوى فوق الخلفية */
+			padding: 60px 40px; /* إضافة مساحة من الأعلى والأسفل */
+			background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء مع شفافية */
+			border-radius: 30px; /* زوايا دائرية للمحتوى */
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.0); /* ظل لطيف للمحتوى */
+			max-width: 750px; /* عرض أقصى للمحتوى */
+			margin: auto; /* لتوسيع المحتوى */
+			height: auto; /* جعل الارتفاع مرن */
+			min-height: calc(100% - 120px); /* ضمان أن المحتوى لا يملأ الشاشة بالكامل */
+			margin-bottom: 20px; /* إضافة فاصل سفلي */
+}
+
+        /* تنسيق الصورة الشخصية مع الإطارين ثلاثي الأبعاد */
+        .profile-img-container {
+            display: inline-block;
+            position: relative; /* لتسهيل إضافة الإطارات */
+            margin: 20px 0;
+            transition: transform 0.3s ease; /* تأثير الحركة */
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #ff9800; /* لون الإطار الداخلي */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* ظل خفيف للصورة */
+			border: 3px solid #ff9800; /* لون الإطار الداخلي مع تقليل السماكة إلى 4px */
+
+            transition: transform 0.2s ease; /* تأثير التحول على الصورة */
+        }
+
+        .outer-border {
+            position: absolute;
+            top: -10px; /* تحريك الإطار الخارجي */
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff); /* تدرج للإطار الخارجي */
+            box-shadow: 15px 15px 30px #c4c4c4, -15px -15px 30px #ffffff; /* تأثير الظل ثلاثي الأبعاد */
+            transition: transform 0.3s ease; /* تأثير التحول على الإطار الخارجي */
+            z-index: -1; /* وضعه خلف الصورة */
+        }
+
+        .profile-img-container:hover .profile-img {
+            transform: scale(1.05); /* تكبير الصورة عند التحويم */
+        }
+
+        .profile-img-container:hover .outer-border {
+            transform: scale(1.1); /* تكبير الإطار الخارجي عند التحويم */
+        }
+        
+        h1, h2 {
+            margin: 5px 0; /* تقليل المسافة بين h1 و h2 */
+            line-height: 1.2; /* تقليل الارتفاع بين الأسطر */
+            text-align: center; /* التأكد من التوسيع */
+            margin-top: 20px; /* زيادة المسافة بين الصورة واسم المستخدم */
+        }
+
+		h1 {
+			color: #333;
+			font-family: 'Arial';
+			font-weight: bold; /* جعل h1 عريض */
+			font-size: calc(1.5rem + 1vw); /* استخدام وحدات مرنة لتغيير الحجم بناءً على العرض */
+			max-font-size: 2.5rem; /* تحديد الحد الأقصى لحجم الخط */
+}
+
+        h2 {
+            color: #333; /* لون العنوان */
+            font-size: 20px; /* حجم خط العنوان */
+            margin: 5px 0; /* هامش حول العنوان */
+            font-family: 'Arial';
+        }
+
+        /* تنسيق أيقونات وسائل التواصل */
+        .social-icons {
+            margin: 30px 0; /* زيادة المسافة بين العنوان والأيقونات الاجتماعية */
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #0077b5; /* اللون الافتراضي لأيقونات لينكد إن */
+        }
+
+        .social-icons a.youtube {
+            color: #FF0000; /* اللون الأحمر لأيقونة يوتيوب */
+        }
+
+        .social-icons a.github {
+            color: #333; /* اللون الرمادي لأيقونة GitHub */
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        /* تنسيق الروابط */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px auto;
+            width: 90%; /* جعل العرض 90% لتناسب الشاشات الصغيرة */
+            max-width: 500px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+			height: auto; /* جعل الارتفاع مرن */
+        }
+
+        .link-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .link-btn img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 120px; /* تغيير حجم الصورة في الشاشات الصغيرة */
+                height: 120px; 
+            }
+
+            h2 {
+                font-size: 18px; /* تقليل حجم الخط في الشاشات الصغيرة */
+            }
+
+            .link-btn {
+                font-size: 16px; /* تقليل حجم الخط في الروابط */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="profile-img-container">
+            <div class="outer-border"></div> <!-- الإطار الخارجي -->
+            <img src="icon/zarea.png" alt="Profile Picture" class="profile-img">
+        </div>
+        
+        <h1>Ahmed Mohamed Zarea</h1>
+        <h2>GIS Specialist & Data Analyst</h2> <!-- العنوان الجديد -->
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmed-zarea/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="30">
+            </a>
+            <a href="https://github.com/ahmedzareagis" target="_blank" class="github">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="30">
+            </a>
+            <a href="https://wa.me/+201066324053" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="30">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="GitHub File/index.html" target="_blank" class="link-btn">
+                <img src="icon/cv.png" alt="Link 1">
+                <span>click to explore my CV and see how I can bring value to your team!</span>
+            </a>
+            <a href="map2.html" target="_blank" class="link-btn">
+                <img src="icon/Qgis-icon-3.0.png" alt="Qgis Maps">
+                <span>You can discover some of my skills in using QGIS.</span>
+            </a>
+            <a href="map.html" target="_blank" class="link-btn">
+                <img src="icon/Arcgis.png" alt="ArcGIS Maps">
+                <span>Discover various maps I created using ESRI products with diverse approaches.</span>
+            </a>
+            <a href="https://code.earthengine.google.com/0c23e4812f2550e3bf6cef6bcfa7d4e4?noload=true" target="_blank" class="link-btn">
+                <img src="icon/earth_engine.png" alt="Link 4">
+                <span>Uncover my contributions in Google Earth Engine for analyzing diverse data.</span>
+            </a>
+            <a href="#" class="link-btn">
+                <img src="icon/AutocadCivil.png" alt="Link 4">
+                <span>Examine my proficiency in CAD and Civil 3D</span>
+            </a>
+            <a href="#" class="link-btn">
+                <img src="icon/python.png" alt="Link 4">
+                <span>Discover how Python was used to create dynamic and intelligent geospatial projects.</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
