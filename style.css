@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar {
+    background: #f0f4f8;
+    padding: 20px;
+    text-align: center;
+    width: 25%;
+}
+
+.sidebar .profile-img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.sidebar p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+
+.main-content {
+    padding: 30px;
+    width: 75%;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills {
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.experience, .certificates {
+    margin-bottom: 20px;
+}
+
+.experience h2, .certificates h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.experience h3, .certificate h3 {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.experience ul, .certificate ul {
+    margin-top: 5px;
+    list-style-type: square;
+    padding-left: 20px;
+    color: #666;
+}
+.contact-info {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.certificates {
+    margin-bottom: 20px;
+}
+
+.certificates h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.certificate-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certificate {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.certificate h3 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.certificate h3 a:hover {
+    text-decoration: none;
+}
+
+.certificate ul, .certificate p {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+
+.soft-skills {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.soft-skills h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.soft-skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.soft-skills li {
+    margin-bottom: 8px;
+    color: #666;
+}
