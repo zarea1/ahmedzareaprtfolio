@@ -115,9 +115,9 @@
     }
 
     .skills ul, .certifications ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 40px;
       list-style-type: none;
       padding-left: 0;
     }
@@ -127,15 +127,14 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 10px;
-      flex: 1 1 calc(50% - 20px);
       text-align: center;
       font-weight: bold;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .skills li:hover, .certifications li:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
     .work-history ul {
@@ -147,59 +146,38 @@
       background: #fff;
       border-radius: 13px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 40px 20px 20px 20px;
+      padding: 20px 20px 20px 20px;
+      margin-bottom: 15px;
       position: relative;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      margin-bottom: 20px;
     }
 
-    .job-floating {
+    .work-history li strong {
       position: absolute;
-      top: 10px;
+      top: -12px;
       left: 20px;
       background-color: #1abc9c;
       color: white;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 0.95em;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.9em;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      z-index: 1;
     }
 
-    .work-history li span {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #333;
-    }
-
-    .accomplishments li, .professional-summary, .education li {
-      background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .accomplishments li:hover, .professional-summary:hover, .education li:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    .work-history li ul {
+      margin-top: 25px;
     }
 
     @media (max-width: 768px) {
-      .skills li, .certifications li {
-        flex: 1 1 calc(50% - 20px);
+      .skills ul, .certifications ul {
+        grid-template-columns: 1fr;
       }
-      .work-history li, .accomplishments li, .professional-summary, .education li {
-        flex: 1 1 100%;
+      .work-history li strong {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-bottom: 10px;
       }
-      header h1 { font-size: 1.8em; }
-      .job-title { font-size: 1em; }
-      .contact-info { font-size: 0.8em; }
-      .contact-info i { font-size: 1em; }
     }
 
     @media (max-width: 480px) {
@@ -249,9 +227,8 @@
       <h2>Work History</h2>
       <ul>
         <li>
-          <div class="job-floating">GIS Specialist</div>
+          <strong>GIS Specialist</strong>
           <div class="date">Oct 2024 - Current</div>
-          <span>Education Development Fund (EDF), Hybrid</span>
           <ul>
             <li>Leveraged GIS to identify locations for educational institutions.</li>
             <li>Collected and analyzed spatial data using Microsoft tools.</li>
@@ -261,9 +238,8 @@
           </ul>
         </li>
         <li>
-          <div class="job-floating">GIS Specialist</div>
+          <strong>GIS Specialist</strong>
           <div class="date">Jan 2023 - Current</div>
-          <span>UpWork, Remote</span>
           <ul>
             <li>Produced high-quality maps and visualizations.</li>
             <li>Integrated GIS with CAD systems.</li>
@@ -274,9 +250,8 @@
           </ul>
         </li>
         <li>
-          <div class="job-floating">Technical Office & GIS Engineer</div>
+          <strong>Technical Office & GIS Engineer</strong>
           <div class="date">Aug 2023 - Jul 2024</div>
-          <span>GIS Office, Bani Suwayf, EG</span>
           <ul>
             <li>Developed GIS applications and services.</li>
             <li>Conducted GIS data quality control.</li>
@@ -307,13 +282,13 @@
     <section class="section certifications">
       <h2>Certifications</h2>
       <ul>
-        <li><a href="crti/python_intermidiate.pdf" target="_blank">Certified Python, Microsoft - 2023</a></li>
-        <li><a href="crti/python - iti.jpg" target="_blank">Certified Python, (ITI) - 2024</a></li>
-        <li><a href="crti/ArcGIS Online Basics.pdf" target="_blank">ArcGIS Online Basics, ESRI - 2024</a></li>
-        <li><a href="crti/ArcGIS Pro Basics.pdf" target="_blank">ArcGIS Pro Basics, ESRI - 2024</a></li>
-        <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
-        <li><a href="crti/Using GIS to Solve Problems.pdf" target="_blank">Using GIS to Solve Problems, ESRI - 2024</a></li>
-        <li><a href="crti/شهاده Arcgis Pro.pdf" target="_blank">Learn ArcGIS Pro, Geosteps - 2024</a></li>
+        <li><a href="crti/python_intermidiate.pdf" target="_blank" rel="noopener noreferrer">Certified Python, Microsoft - 2023</a></li>
+        <li><a href="crti/python - iti.jpg" target="_blank" rel="noopener noreferrer">Certified Python, (ITI) - 2024</a></li>
+        <li><a href="crti/ArcGIS Online Basics.pdf" target="_blank" rel="noopener noreferrer">ArcGIS Online Basics, ESRI - 2024</a></li>
+        <li><a href="crti/ArcGIS Pro Basics.pdf" target="_blank" rel="noopener noreferrer">ArcGIS Pro Basics, ESRI - 2024</a></li>
+        <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank" rel="noopener noreferrer">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
+        <li><a href="crti/Using GIS to Solve Problems.pdf" target="_blank" rel="noopener noreferrer">Using GIS to Solve Problems, ESRI - 2024</a></li>
+        <li><a href="crti/\u0634\u0647\u0627\u062f\u0647 Arcgis Pro.pdf" target="_blank" rel="noopener noreferrer">Learn ArcGIS Pro, Geosteps - 2024</a></li>
       </ul>
     </section>
   </div>
