@@ -146,7 +146,7 @@
       background: #fff;
       border-radius: 13px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px 20px 20px 20px;
+      padding: 20px;
       margin-bottom: 15px;
       position: relative;
     }
@@ -170,25 +170,29 @@
       font-weight: 600;
     }
 
-    /* New styles for tasks list inside work history */
+    /* Updated styles for tasks list inside work history */
     .tasks-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px 40px;
       list-style-type: none;
       padding-left: 0;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 15px 20px;
-      font-weight: bold;
       margin-top: 10px;
     }
 
     .tasks-list li {
-      padding: 8px 10px;
-      border-radius: 8px;
+      height: 90px; /* ارتفاع ثابت */
+      border: 1.5px solid #1abc9c; /* خط متوسط ومرئي */
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
+      word-break: break-word;
+      background-color: #fff;
     }
 
     .tasks-list li:hover {
