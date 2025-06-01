@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmed Zarea - CV</title>
-  <meta name="description" content="Ahmed Zarea - GIS Specialist Resume." />
-  <meta name="keywords" content="GIS, Ahmed Zarea, ArcGIS, Python, Resume" />
+  <meta name="description" content="Ahmed Zarea - GIS Specialist Resume. Experienced in ArcGIS, Python, and spatial analysis." />
+  <meta name="keywords" content="GIS, Ahmed Zarea, ArcGIS, Python, Remote Sensing, Resume, CV" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <style>
     body {
@@ -53,6 +53,7 @@
       margin-top: 15px;
       font-size: 0.9em;
       color: #555;
+      flex-direction: row;
     }
 
     .contact-info i {
@@ -69,8 +70,15 @@
       margin: 20px 0;
       padding: 20px;
       border-radius: 10px;
+      position: relative;
       background-color: #f9f9f9;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .section h2 {
@@ -91,39 +99,47 @@
       border-radius: 3px;
     }
 
+    .skills, .work-history, .accomplishments, .certifications, .education {
+      background-color: #f2f4f8;
+    }
+
     .skills h2::before { background-color: #3498db; }
     .work-history h2::before { background-color: #1abc9c; }
     .accomplishments h2::before { background-color: #9b59b6; }
     .certifications h2::before { background-color: #f39c12; }
     .education h2::before { background-color: #e74c3c; }
 
+    .section p, .section ul {
+      font-size: 1em;
+      color: #555;
+    }
+
     .skills ul, .certifications ul {
       display: flex;
       flex-wrap: wrap;
-      list-style: none;
+      gap: 20px;
+      list-style-type: none;
       padding-left: 0;
-      margin: 0;
-      gap: 10px;
     }
 
     .skills li, .certifications li {
-      flex: 0 0 48%;
       background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 10px;
+      flex: 1 1 calc(50% - 20px);
       text-align: center;
       font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .skills li:hover, .certifications li:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .work-history ul {
-      list-style: none;
+      list-style-type: none;
       padding-left: 0;
     }
 
@@ -131,48 +147,65 @@
       background: #fff;
       border-radius: 13px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding-top: 40px;
-      padding-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 40px 20px 20px 20px;
       position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 20px;
     }
 
-    .work-history li strong {
+    .job-floating {
       position: absolute;
-      top: -15px;
+      top: 10px;
       left: 20px;
       background-color: #1abc9c;
       color: white;
-      padding: 5px 15px;
-      border-radius: 10px;
-      font-size: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.95em;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 1;
     }
 
-    .work-history .date {
-      font-style: italic;
-      font-size: 0.9em;
-      color: #888;
-      margin-bottom: 10px;
+    .work-history li span {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
     }
 
-    .education li, .accomplishments li {
+    .accomplishments li, .professional-summary, .education li {
       background: #fff;
       border-radius: 13px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin-bottom: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .accomplishments li:hover, .professional-summary:hover, .education li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 768px) {
       .skills li, .certifications li {
+        flex: 1 1 calc(50% - 20px);
+      }
+      .work-history li, .accomplishments li, .professional-summary, .education li {
         flex: 1 1 100%;
       }
-      .contact-info {
-        font-size: 0.8em;
-      }
+      header h1 { font-size: 1.8em; }
+      .job-title { font-size: 1em; }
+      .contact-info { font-size: 0.8em; }
+      .contact-info i { font-size: 1em; }
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.6em; }
+      .job-title { font-size: 0.9em; }
+      .contact-info { font-size: 0.7em; }
     }
 
     @media print {
@@ -191,7 +224,7 @@
         <i class="fas fa-envelope"></i> <a href="mailto:zareaahmed23@gmail.com">zareaahmed23@gmail.com</a>
         <i class="fas fa-phone-alt"></i> +20 1066324053
         <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
-        <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ahmed-zarea" target="_blank">LinkedIn</a>
+        <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ahmed-zarea" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </header>
 
@@ -216,8 +249,9 @@
       <h2>Work History</h2>
       <ul>
         <li>
-          <strong>GIS Specialist</strong>
-          <div class="date">Oct 2024 - Current | Education Development Fund (EDF), Hybrid</div>
+          <div class="job-floating">GIS Specialist</div>
+          <div class="date">Oct 2024 - Current</div>
+          <span>Education Development Fund (EDF), Hybrid</span>
           <ul>
             <li>Leveraged GIS to identify locations for educational institutions.</li>
             <li>Collected and analyzed spatial data using Microsoft tools.</li>
@@ -227,8 +261,9 @@
           </ul>
         </li>
         <li>
-          <strong>GIS Specialist</strong>
-          <div class="date">Jan 2023 - Current | UpWork, Remote</div>
+          <div class="job-floating">GIS Specialist</div>
+          <div class="date">Jan 2023 - Current</div>
+          <span>UpWork, Remote</span>
           <ul>
             <li>Produced high-quality maps and visualizations.</li>
             <li>Integrated GIS with CAD systems.</li>
@@ -239,8 +274,9 @@
           </ul>
         </li>
         <li>
-          <strong>Technical Office & GIS Engineer</strong>
-          <div class="date">Aug 2023 - Jul 2024 | GIS Office, Bani Suwayf, EG</div>
+          <div class="job-floating">Technical Office & GIS Engineer</div>
+          <div class="date">Aug 2023 - Jul 2024</div>
+          <span>GIS Office, Bani Suwayf, EG</span>
           <ul>
             <li>Developed GIS applications and services.</li>
             <li>Conducted GIS data quality control.</li>
@@ -271,13 +307,13 @@
     <section class="section certifications">
       <h2>Certifications</h2>
       <ul>
-        <li><a href="crti/python_intermidiate.pdf">Certified Python, Microsoft - 2023</a></li>
-        <li><a href="crti/python - iti.jpg">Certified Python, (ITI) - 2024</a></li>
-        <li><a href="crti/ArcGIS Online Basics.pdf">ArcGIS Online Basics, ESRI - 2024</a></li>
-        <li><a href="crti/ArcGIS Pro Basics.pdf">ArcGIS Pro Basics, ESRI - 2024</a></li>
-        <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
-        <li><a href="crti/Using GIS to Solve Problems.pdf">Using GIS to Solve Problems, ESRI - 2024</a></li>
-        <li><a href="crti/شهاده Arcgis Pro.pdf">Learn ArcGIS Pro, Geosteps - 2024</a></li>
+        <li><a href="crti/python_intermidiate.pdf" target="_blank">Certified Python, Microsoft - 2023</a></li>
+        <li><a href="crti/python - iti.jpg" target="_blank">Certified Python, (ITI) - 2024</a></li>
+        <li><a href="crti/ArcGIS Online Basics.pdf" target="_blank">ArcGIS Online Basics, ESRI - 2024</a></li>
+        <li><a href="crti/ArcGIS Pro Basics.pdf" target="_blank">ArcGIS Pro Basics, ESRI - 2024</a></li>
+        <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
+        <li><a href="crti/Using GIS to Solve Problems.pdf" target="_blank">Using GIS to Solve Problems, ESRI - 2024</a></li>
+        <li><a href="crti/شهاده Arcgis Pro.pdf" target="_blank">Learn ArcGIS Pro, Geosteps - 2024</a></li>
       </ul>
     </section>
   </div>
