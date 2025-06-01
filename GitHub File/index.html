@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmed Zarea - CV</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Ahmed Zarea - GIS Specialist Resume. Experienced in ArcGIS, Python, and spatial analysis." />
+    <meta name="keywords" content="GIS, Ahmed Zarea, ArcGIS, Python, Remote Sensing, Resume, CV" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -51,7 +53,7 @@
             margin-top: 15px;
             font-size: 0.9em;
             color: #555;
-            flex-direction: row; /* جعل العناصر مرتبة أفقياً */
+            flex-direction: row;
         }
 
         .contact-info i {
@@ -101,25 +103,11 @@
             background-color: #f2f4f8;
         }
 
-        .skills h2::before {
-            background-color: #3498db;
-        }
-
-        .work-history h2::before {
-            background-color: #1abc9c;
-        }
-
-        .accomplishments h2::before {
-            background-color: #9b59b6;
-        }
-
-        .certifications h2::before {
-            background-color: #f39c12;
-        }
-
-        .education h2::before {
-            background-color: #e74c3c;
-        }
+        .skills h2::before { background-color: #3498db; }
+        .work-history h2::before { background-color: #1abc9c; }
+        .accomplishments h2::before { background-color: #9b59b6; }
+        .certifications h2::before { background-color: #f39c12; }
+        .education h2::before { background-color: #e74c3c; }
 
         .section p, .section ul {
             font-size: 1em;
@@ -139,7 +127,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 10px;
-            flex: 1 1 calc(33% - 20px); /* Adjust this based on how many items per row you want */
+            flex: 1 1 calc(50% - 20px);
             text-align: center;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -163,6 +151,7 @@
             position: relative;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 15px;
         }
 
         .work-history li:hover, .accomplishments li:hover, .professional-summary:hover, .education li:hover {
@@ -170,61 +159,33 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .section h2::before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 30px;
-            height: 4px;
-            border-radius: 2px;
-        }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .skills li, .certifications li {
-                flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+                flex: 1 1 calc(50% - 20px);
             }
-
             .work-history li, .accomplishments li, .professional-summary, .education li {
-                flex: 1 1 100%; /* Full width on smaller screens */
+                flex: 1 1 100%;
             }
-
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            .job-title {
-                font-size: 1em;
-            }
-
-            .contact-info {
-                font-size: 0.8em;
-                flex-direction: row; /* لا تزال مرتبة أفقياً */
-            }
-
-            .contact-info i {
-                font-size: 1em;
-            }
+            header h1 { font-size: 1.8em; }
+            .job-title { font-size: 1em; }
+            .contact-info { font-size: 0.8em; }
+            .contact-info i { font-size: 1em; }
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.6em;
-            }
+            header h1 { font-size: 1.6em; }
+            .job-title { font-size: 0.9em; }
+            .contact-info { font-size: 0.7em; }
+        }
 
-            .job-title {
-                font-size: 0.9em;
-            }
-
-            .contact-info {
-                font-size: 0.7em;
-            }
+        @media print {
+            body { background-color: white; color: black; }
+            .container { box-shadow: none; border: none; margin: 0; padding: 0; }
+            .section { page-break-inside: avoid; }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1>Ahmed Mohamed Zarea</h1>
@@ -233,17 +194,15 @@
                 <i class="fas fa-envelope"></i> <a href="mailto:zareaahmed23@gmail.com">zareaahmed23@gmail.com</a>
                 <i class="fas fa-phone-alt"></i> +20 1066324053
                 <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
-                <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ahmed-zarea" target="_blank">LinkedIn</a>
+                <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ahmed-zarea" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
         </header>
 
-        <!-- Professional Summary Section -->
         <section class="section professional-summary">
             <h2>Professional Summary</h2>
             <p>Successful GIS Specialist accomplished in handling large volumes of complex GIS data for industry or government use. Talents include spatial analysis and preparing graphic representations. Reliable in completing accurate work according to specifications.</p>
         </section>
 
-        <!-- Skills Section -->
         <section class="section skills">
             <h2>Skills</h2>
             <ul>
@@ -256,59 +215,52 @@
             </ul>
         </section>
 
-        <!-- Work History Section -->
         <section class="section work-history">
             <h2>Work History</h2>
-<ul>
+            <ul>
                 <li>
                     <div class="date">Oct 2024 - Current</div>
-                    <strong>GIS Specialist</strong> - Education Development Fund (EDF) ,Hybrid
+                    <strong>GIS Specialist</strong> - Education Development Fund (EDF), Hybrid
                     <ul>
-                        <li>Leveraged (GIS) to identify the most suitable locations for establishing educational institutions (schools, institutes, and colleges) across all governorates, addressing the requirements of various educational levels (primary, preparatory, secondary, and higher education).</li>
-                        <li>Conducted independent data collection, analysis, and preparation, using Microsoft tools to ensure the accuracy and completeness of geographic datasets for project planning.</li>
-                        <li>Designed and developed comprehensive dashboards in Power BI to visualize and communicate project insights, facilitating informed decision-making and strategic planning.</li>
-                        <li>Created a database for the Harem Hawara region and conducted analyses on vegetation cover, land use, precipitation, and temperature.</li>
-                        <li>Supported the planning and execution of educational development projects through spatial analysis and GIS-based solutions, optimizing the placement of educational facilities.</li>
-			</li>	
+                        <li>Leveraged GIS to identify locations for educational institutions.</li>
+                        <li>Collected and analyzed spatial data using Microsoft tools.</li>
+                        <li>Built Power BI dashboards for decision-making.</li>
+                        <li>Analyzed land use, vegetation, and climate in Harem Hawara.</li>
+                        <li>Supported planning through spatial analysis.</li>
                     </ul>
-		
-		<br>
-            <ul>
+                </li>
                 <li>
                     <div class="date">Jan 2023 - Current</div>
                     <strong>GIS Specialist</strong> - UpWork, Remote
                     <ul>
-                        <li>Design and produce high-quality maps and visualizations.</li>
-                        <li>Integrate GIS with other technologies and data sources (CAD).</li>
-                        <li>Conducted spatial analysis with ArcGIS to determine optimal locations for electric vehicle charging stations.</li>
-                        <li>Created a database for the Harem Hawara region and conducted analyses on vegetation cover, land use, precipitation, and temperature.</li>
-                        <li>Executed a project analyzing the amount of solar radiation for the city of Abha, Saudi Arabia for the year 2023.</li>
-						<li>Create a 3D model of Mount Kilimanjaro using Python.</li>
+                        <li>Produced high-quality maps and visualizations.</li>
+                        <li>Integrated GIS with CAD systems.</li>
+                        <li>Analyzed EV station locations using ArcGIS.</li>
+                        <li>Performed land cover analysis for Harem Hawara.</li>
+                        <li>Analyzed solar radiation in Abha for 2023.</li>
+                        <li>Created a 3D model of Mount Kilimanjaro in Python.</li>
                     </ul>
                 </li>
-		    <br>
                 <li>
                     <div class="date">Aug 2023 - Jul 2024</div>
-                    <strong>Technical Office & GIS Engineer</strong> - GIS Office, Bani Suwayf,EG
+                    <strong>Technical Office & GIS Engineer</strong> - GIS Office, Bani Suwayf, EG
                     <ul>
-                        <li>Assisted in the development of GIS applications and services.</li>
-                        <li>Performed quality control and assurance of GIS data.</li>
-						<li>Preparing, drawing, and designing maps.</li>
-						<li>Verifying the accuracy and validity of the surveying data collected on-site.</li>
+                        <li>Developed GIS applications and services.</li>
+                        <li>Conducted GIS data quality control.</li>
+                        <li>Prepared and designed maps.</li>
+                        <li>Verified field survey data accuracy.</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <!-- Accomplishments Section -->
         <section class="section accomplishments">
             <h2>Accomplishments</h2>
             <ul>
-                <li>Implementation of graduation project titled "Using Geomatics Techniques to Study Air Quality in Beni Suef Governorate", Beni sueif University, A+, 2024.</li>
+                <li>Graduation project: "Using Geomatics Techniques to Study Air Quality in Beni Suef", Grade: A+, 2024.</li>
             </ul>
         </section>
 
-          <!-- Education Section -->
         <section class="section education">
             <h2>Education</h2>
             <ul>
@@ -318,36 +270,19 @@
                 </li>
             </ul>
         </section>
-		
-		
-        <!-- Certifications Section -->
-       <section class="section certifications">
-    <h2>Certifications</h2>
-    <ul>
-        <li>
-            <a href="crti/python_intermidiate.pdf" target="_blank" >Certified Python, Microsoft - 2023</a>
-        </li>
-        <li>
-            <a href="crti/python - iti.jpg" target="_blank">Certified Python, (ITI) - 2024</a>
-        </li>
-        <li>
-            <a href="crti/ArcGIS Online Basics.pdf" target="_blank">ArcGIS Online Basics, ESRI - 2024</a>
-        </li>
-		<li>
-            <a href="crti/ArcGIS Pro Basics.pdf" target="_blank">ArcGIS Pro Basics, ESRI - 2024</a>
-        </li>
-		<li>
-            <a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank">Putting Your GIS Skills to Work, ESRI - 2024</a>
-        </li>
-		<li>
-            <a href="crti/Using GIS to Solve Problems.pdf" target="_blank">Using GIS to Solve Problems, ESRI - 2024</a>
-        </li>
-		<li>
-            <a href="crti/شهاده Arcgis Pro.pdf" target="_blank">Learn Arcgis Pro, Geosteps - 2024</a>
-        </li>
-    </ul>
-</section>
-    </div>
 
+        <section class="section certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li><a href="crti/python_intermidiate.pdf" target="_blank" rel="noopener noreferrer">Certified Python, Microsoft - 2023</a></li>
+                <li><a href="crti/python - iti.jpg" target="_blank" rel="noopener noreferrer">Certified Python, (ITI) - 2024</a></li>
+                <li><a href="crti/ArcGIS Online Basics.pdf" target="_blank" rel="noopener noreferrer">ArcGIS Online Basics, ESRI - 2024</a></li>
+                <li><a href="crti/ArcGIS Pro Basics.pdf" target="_blank" rel="noopener noreferrer">ArcGIS Pro Basics, ESRI - 2024</a></li>
+                <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank" rel="noopener noreferrer">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
+                <li><a href="crti/Using GIS to Solve Problems.pdf" target="_blank" rel="noopener noreferrer">Using GIS to Solve Problems, ESRI - 2024</a></li>
+                <li><a href="crti/شهاده Arcgis Pro.pdf" target="_blank" rel="noopener noreferrer">Learn ArcGIS Pro, Geosteps - 2024</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
