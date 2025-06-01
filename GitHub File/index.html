@@ -163,12 +163,44 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
-    .work-history li ul {
-      margin-top: 25px;
+    .work-history li .date {
+      margin-top: 30px;
+      font-style: italic;
+      color: #555;
+      font-weight: 600;
+    }
+
+    /* New styles for tasks list inside work history */
+    .tasks-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 40px;
+      list-style-type: none;
+      padding-left: 0;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .tasks-list li {
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tasks-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
     @media (max-width: 768px) {
       .skills ul, .certifications ul {
+        grid-template-columns: 1fr;
+      }
+      .tasks-list {
         grid-template-columns: 1fr;
       }
       .work-history li strong {
@@ -229,7 +261,7 @@
         <li>
           <strong>GIS Specialist</strong>
           <div class="date">Oct 2024 - Current</div>
-          <ul>
+          <ul class="tasks-list">
             <li>Leveraged GIS to identify locations for educational institutions.</li>
             <li>Collected and analyzed spatial data using Microsoft tools.</li>
             <li>Built Power BI dashboards for decision-making.</li>
@@ -240,7 +272,7 @@
         <li>
           <strong>GIS Specialist</strong>
           <div class="date">Jan 2023 - Current</div>
-          <ul>
+          <ul class="tasks-list">
             <li>Produced high-quality maps and visualizations.</li>
             <li>Integrated GIS with CAD systems.</li>
             <li>Analyzed EV station locations using ArcGIS.</li>
@@ -252,7 +284,7 @@
         <li>
           <strong>Technical Office & GIS Engineer</strong>
           <div class="date">Aug 2023 - Jul 2024</div>
-          <ul>
+          <ul class="tasks-list">
             <li>Developed GIS applications and services.</li>
             <li>Conducted GIS data quality control.</li>
             <li>Prepared and designed maps.</li>
@@ -288,7 +320,7 @@
         <li><a href="crti/ArcGIS Pro Basics.pdf" target="_blank" rel="noopener noreferrer">ArcGIS Pro Basics, ESRI - 2024</a></li>
         <li><a href="crti/Putting Your GIS Skills to Workpdf.pdf" target="_blank" rel="noopener noreferrer">Putting Your GIS Skills to Work, ESRI - 2024</a></li>
         <li><a href="crti/Using GIS to Solve Problems.pdf" target="_blank" rel="noopener noreferrer">Using GIS to Solve Problems, ESRI - 2024</a></li>
-        <li><a href="crti/\u0634\u0647\u0627\u062f\u0647 Arcgis Pro.pdf" target="_blank" rel="noopener noreferrer">Learn ArcGIS Pro, Geosteps - 2024</a></li>
+        <li><a href="crti/شهاده Arcgis Pro.pdf" target="_blank" rel="noopener noreferrer">Learn ArcGIS Pro, Geosteps - 2024</a></li>
       </ul>
     </section>
   </div>
