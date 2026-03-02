@@ -6,6 +6,14 @@
 <title>Ahmed Mohamed Zare | Portfolio</title>
   <link rel="icon" type="image/png" href="https://i.ibb.co/jvrvVwTN/Gemini-Generated-Image-500.png">
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Mohamed Zare | Portfolio</title>
+<link rel="icon" type="image/png" href="https://i.ibb.co/jvrvVwTN/Gemini-Generated-Image-500.png">
+
 <style>
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -45,6 +53,39 @@ h1 { color: #00ADEF; margin: 15px 0 5px; }
     color: #00ADEF;
     font-size: 0.95rem;
     text-align: left;
+}
+
+/* ===== SOCIAL BUTTONS PROFESSIONAL VERSION ===== */
+.social-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 6px;
+    font-size: 0.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s ease;
+}
+
+.social-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.social-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
 /* Buttons */
@@ -133,40 +174,36 @@ h1 { color: #00ADEF; margin: 15px 0 5px; }
 <body>
 <div class="content">
 
-<div class="content" style="position: relative;">
+<div style="display: flex; align-items: flex-start; gap: 20px;">
 
-  <div style="display: flex; align-items: flex-start; gap: 20px;">
+<img src="icon/zarea (1) (1).png" class="profile-img">
 
-    <!-- PROFILE IMAGE -->
-    <img src="icon/zarea (1) (1).png" class="profile-img">
+<div style="display: flex; flex-direction: column; justify-content: center; flex:1; gap: 10px;">
 
-    <!-- NAME, TITLE & SOCIAL BUTTONS -->
-    <div style="display: flex; flex-direction: column; justify-content: center; flex:1; gap: 10px;">
+<div>
+<h1 style="margin:0;">Ahmed Mohamed Zarea</h1>
+<p style="margin:3px 0;">Geospatial Data Analyst | BI & Spatial Intelligence Specialist</p>
+</div>
 
-      <!-- Name & Title -->
-      <div>
-        <h1 style="margin:0;">Ahmed Mohamed Zarea</h1>
-        <p style="margin:3px 0;">Geospatial Data Analyst | BI & Spatial Intelligence Specialist</p>
-      </div>
+<div class="social-container">
+<a href="https://www.linkedin.com/in/ahmed-zarea/" target="_blank" class="social-btn">
+<img src="https://images.icon-icons.com/555/PNG/512/linkedin_icon-icons.com_53609.png">LinkedIn
+</a>
 
-      <!-- Social Buttons -->
-      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <a href="https://www.linkedin.com/in/ahmed-zarea/" target="_blank" class="link-btn" style="background-color: rgba(255,255,255,0.1); color: #ffffff; padding:6px 10px; font-size:0.85rem;">
-          <img src="https://images.icon-icons.com/555/PNG/512/linkedin_icon-icons.com_53609.png" style="width:20px; height:20px; margin-right:5px;">LinkedIn
-        </a>
-        <a href="https://wa.me/+201101026302" target="_blank" class="link-btn" style="background-color: rgba(255,255,255,0.1); color: #ffffff; padding:6px 10px; font-size:0.85rem;">
-          <img src="https://images.icon-icons.com/3053/PNG/512/whatsapp_alt_macos_bigsur_icon_189553.png" style="width:20px; height:20px; margin-right:5px;">WhatsApp
-        </a>
-        <a href="https://github.com/ahmedzareagis" target="_blank" class="link-btn" style="background-color: rgba(255,255,255,0.1); color: #ffffff; padding:6px 10px; font-size:0.85rem;">
-          <img src="https://images.icon-icons.com/3053/PNG/512/github_macos_bigsur_icon_190140.png" style="width:20px; height:20px; margin-right:5px;">GitHub
-        </a>
-        <a href="mailto:ahmedzaregis@gmail.com?subject=Contact%20via%20Portfolio" target="_blank" class="link-btn" style="background-color: rgba(255,255,255,0.1); color: #ffffff; padding:6px 10px; font-size:0.85rem;">
-          <img src="https://images.icon-icons.com/477/PNG/96/email_46961.png" style="width:20px; height:20px; margin-right:5px;">Email
-        </a>
-      </div>
+<a href="https://wa.me/+201101026302" target="_blank" class="social-btn">
+<img src="https://images.icon-icons.com/3053/PNG/512/whatsapp_alt_macos_bigsur_icon_189553.png">WhatsApp
+</a>
 
-    </div>
-  </div>
+<a href="https://github.com/ahmedzareagis" target="_blank" class="social-btn">
+<img src="https://images.icon-icons.com/3053/PNG/512/github_macos_bigsur_icon_190140.png">GitHub
+</a>
+
+<a href="mailto:ahmedzaregis@gmail.com?subject=Contact%20via%20Portfolio" target="_blank" class="social-btn">
+<img src="https://images.icon-icons.com/477/PNG/96/email_46961.png">Email
+</a>
+</div>
+
+</div>
 </div>
 
 
@@ -175,12 +212,12 @@ h1 { color: #00ADEF; margin: 15px 0 5px; }
 
 <a href="GitHub File/Ahmed Zarea2.pdf" target="_blank" class="link-btn">
 <img src="https://images.icon-icons.com/2104/PNG/512/cv_icon_129114.png">
-<span>Explore my Resume</span>
+<span>Explore my CV</span>
 </a>
 
 <div class="link-btn" onclick="openSection('mapsMenu')">
 <img src="https://images.icon-icons.com/3053/PNG/512/maps_macos_bigsur_icon_189998.png">
-<span>Maps (QGIS & ArcGIS Pro)</span>
+<span>Maps (QGIS & ESRI)</span>
 </div>
 
 <div class="link-btn" onclick="openSection('skillsMenu')">
@@ -218,8 +255,8 @@ h1 { color: #00ADEF; margin: 15px 0 5px; }
 </a>
 
 <a href="maps/index.html" target="_blank" class="link-btn">
-<img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_64636a5c446c22391d4ed719e0987cd2/arcgis-pro.png">
-<span>Professional maps created using ArcGIS Pro</span>
+<img src="icon/Arcgis.png">
+<span>Professional maps created using ESRI</span>
 </a>
 
 <div class="link-btn back-btn" onclick="goBack()">⬅ Back</div>
@@ -284,8 +321,3 @@ function goBack() {
 
 </body>
 </html>
-
-
-
-
-
